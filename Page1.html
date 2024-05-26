@@ -63,9 +63,8 @@
             display: block;
             margin-bottom: 10px;
         }
-        .editable-text {
+        .box-text {
             width: 100%;
-            border: 1px solid #ddd;
             padding: 5px;
             border-radius: 3px;
             min-height: 60px;
@@ -84,12 +83,13 @@
     </style>
 </head>
 <body>
-  <center><h1>Video Game Database</h1> </center>
-  <div class="topnav">
-    <a class="active" href="index.html">Home</a>
-    <a href="contact.html">Contact</a>
-    <a href="about.html">About</a>
-  </div>
+
+    <center><h1>Video Game Database</h1></center>
+    <div class="topnav">
+        <a href="index.html">Home</a>
+        <a href="contact.html">Contact</a>
+        <a href="about.html">About</a>
+    </div>
     
     <div class="container">
         <div class="header">
@@ -97,29 +97,126 @@
         </div>
         
         <div class="box-container">
-            <script>
-                function createBox(index) {
-                    const box = document.createElement('div');
-                    box.className = 'box';
-
-                    const placeholder = document.createElement('div');
-                    placeholder.className = 'placeholder';
-                    placeholder.innerText = `Image Placeholder ${index + 1}`;
-                    box.appendChild(placeholder);
-
-                    const textArea = document.createElement('div');
-                    textArea.className = 'editable-text';
-                    textArea.contentEditable = true;
-                    textArea.innerText = `Editable text ${index + 1}`;
-                    box.appendChild(textArea);
-
-                    return box;
-                }
-
-                for (let i = 0; i < 20; i++) {
-                    document.querySelector('.box-container').appendChild(createBox(i));
-                }
-            </script>
+            <div class="box">
+                <div class="placeholder">
+                    <img src="bg3.jpg" alt="Image 1">
+                </div>
+                <div class="box-text">Baldur's Gate 3</div>
+            </div>
+            <div class="box">
+                <div class="placeholder">
+                    <img src="elden.jpg" alt="Image 2">
+                </div>
+                <div class="box-text">Elden Ring</div>
+            </div>
+            <div class="box">
+                <div class="placeholder">
+                    <img src="helldivers.jpg" alt="Image 3">
+                </div>
+                <div class="box-text">Helldivers 2</div>
+            </div>
+            <div class="box">
+                <div class="placeholder">
+                    <img src="image4.jpg" alt="Image 4">
+                </div>
+                <div class="box-text">Sea of Theives</div>
+            </div>
+            <div class="box">
+                <div class="placeholder">
+                    <img src="image5.jpg" alt="Image 5">
+                </div>
+                <div class="box-text">Minecraft</div>
+            </div>
+            <div class="box">
+                <div class="placeholder">
+                    <img src="image6.jpg" alt="Image 6">
+                </div>
+                <div class="box-text">Fortnite</div>
+            </div>
+            <div class="box">
+                <div class="placeholder">
+                    <img src="image7.jpg" alt="Image 7">
+                </div>
+                <div class="box-text">Tetris</div>
+            </div>
+            <div class="box">
+                <div class="placeholder">
+                    <img src="image8.jpg" alt="Image 8">
+                </div>
+                <div class="box-text">Snake</div>
+            </div>
+            <div class="box">
+                <div class="placeholder">
+                    <img src="image9.jpg" alt="Image 9">
+                </div>
+                <div class="box-text">Hotline Miami</div>
+            </div>
+            <div class="box">
+                <div class="placeholder">
+                    <img src="image10.jpg" alt="Image 10">
+                </div>
+                <div class="box-text">Bloodborne</div>
+            </div>
+            <div class="box">
+                <div class="placeholder">
+                    <img src="image11.jpg" alt="Image 11">
+                </div>
+                <div class="box-text">Sekiro Shadows Die Twice</div>
+            </div>
+            <div class="box">
+                <div class="placeholder">
+                    <img src="image12.jpg" alt="Image 12">
+                </div>
+                <div class="box-text">Dishonoured</div>
+            </div>
+            <div class="box">
+                <div class="placeholder">
+                    <img src="image13.jpg" alt="Image 13">
+                </div>
+                <div class="box-text">Skyrim</div>
+            </div>
+            <div class="box">
+                <div class="placeholder">
+                    <img src="image14.jpg" alt="Image 14">
+                </div>
+                <div class="box-text">Fallout 4</div>
+            </div>
+            <div class="box">
+                <div class="placeholder">
+                    <img src="image15.jpg" alt="Image 15">
+                </div>
+                <div class="box-text">Fallout New Vegas</div>
+            </div>
+            <div class="box">
+                <div class="placeholder">
+                    <img src="image16.jpg" alt="Image 16">
+                </div>
+                <div class="box-text">Spider-Man</div>
+            </div>
+            <div class="box">
+                <div class="placeholder">
+                    <img src="image17.jpg" alt="Image 17">
+                </div>
+                <div class="box-text">Dark Souls</div>
+            </div>
+            <div class="box">
+                <div class="placeholder">
+                    <img src="image18.jpg" alt="Image 18">
+                </div>
+                <div class="box-text">Firewatch</div>
+            </div>
+            <div class="box">
+                <div class="placeholder">
+                    <img src="image19.jpg" alt="Image 19">
+                </div>
+                <div class="box-text">Portal 2</div>
+            </div>
+            <div class="box">
+                <div class="placeholder">
+                    <img src="image20.jpg" alt="Image 20">
+                </div>
+                <div class="box-text">Hunt Showdown</div>
+            </div>
         </div>
     </div>
 
