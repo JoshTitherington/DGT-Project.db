@@ -1,0 +1,10 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+  {% for game in games %}
+    <p>
+      <a href="/game/{{game[0]}}">{{ game[1] }}</a>
+    </p>
+  {% endfor %}
+
+{% endblock %}

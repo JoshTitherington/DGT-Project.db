@@ -1,6 +1,6 @@
 @font-face {
-  font-family: Mukta-Vanni-Regular;
-  src: url(Mukta-Vanni-Regular.woff);
+  font-family: Gamer-Regular;
+  src: url(Gamer-Regular.woff);
 }
 
 /* Reset some default browser styles */
@@ -37,6 +37,7 @@ header {
 
 header h1 {
     margin: 0;
+    font-family: Gamer-regular;
 }
 
 /* Navigation bar styling */

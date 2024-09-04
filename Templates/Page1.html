@@ -1,210 +1,21 @@
-<!DOCTYPE html>
-<link rel="stylesheet" href="static/css/style.css">
-<link rel="icon" type="image/x-icon" href="static/images/logo.jpg">
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Video Game Database</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f0f0f0;
-            margin: 0;
-            padding: 0;
-        }
-        .container {
-            padding: 20px;
-        }
-        .header {
-            text-align: center;
-            margin: 20px 0;
-        }
-        .box-container {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
-            justify-content: center;
-        }
-        .box {
-            background-color: white;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-            padding: 10px;
-            width: calc(25% - 20px);
-            box-sizing: border-box;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            text-align: center;
-        }
-        .box img {
-            max-width: 100%;
-            height: auto;
-            display: block;
-            margin-bottom: 10px;
-        }
-        .box-text {
-            width: 100%;
-            padding: 5px;
-            border-radius: 3px;
-            min-height: 60px;
-            overflow: auto;
-        }
-        .placeholder {
-            width: 100%;
-            height: 150px;
-            background-color: #ddd;
-            border: 2px dashed #ccc;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-bottom: 10px;
-        }
-    </style>
-</head>
-<body>
-
-    <center><h1>Video Game Database</h1></center>
-    <div class="topnav">
-        <a href="/">Home</a>
-        <a class="active">Games</a>
-        <a href="/contact">Contact</a>
-        <a href="/about">About</a>
-        <input type="text" placeholder="Search...">
-    </div>
-    
+{% extends 'base.html' %}
+{% block content %}
     <div class="container">
         <div class="header">
             <h2>Games</h2>
         </div>
-        
         <!--Creates the boxes for each game in the database with a image attached.-->
         <div class="box-container">
+            {% for game in games %}
             <div class="box">
                 <div class="placeholder">
-                    <img src="static/images/bg3.jpg" alt="Image 1">
+                    <img src="static/images/id.jpg" alt="alt_text">
                 </div>
-                <div class="box-text"><a href="/page2">Baldur's Gate 3</a></div><!--Links the text within the box to a page which contains information about the game-->
+                <div class="box-text"><a href="/videogame/{{ game[0] }}">{{ game[1] }}</a></div><!--Links the text within the box to a page which contains information about the game-->
             </div>
+            {% endfor %}
             <!--Each box contains the image I want it to show-->
-            <div class="box">
-                <div class="placeholder">
-                    <img src="static/images/elden.jpg" alt="Image 2">
-                </div>
-                <div class="box-text"><a href="/page3">Elden Ring</a></div> 
-            </div>
-            <div class="box">
-                <div class="placeholder">
-                    <img src="static/images/helldivers.jpg" alt="Image 3">
-                </div>
-                <div class="box-text"><a href="/page4">Helldivers 2</a></div>
-            </div>
-            <div class="box">
-                <div class="placeholder">
-                    <img src="static/images/sot.jpg" alt="Image 4">
-                </div>
-                <div class="box-text"><a href="/page5">Sea of Thieves</a></div>
-            </div>
-            <div class="box">
-                <div class="placeholder">
-                    <img src="static/images/mine.jpg" alt="Image 5">
-                </div>
-                <div class="box-text"><a href="/page6">Minecraft</a></div>
-            </div>
-            <div class="box">
-                <div class="placeholder">
-                    <img src="static/images/fort.jpg" alt="Image 6">
-                </div>
-                <div class="box-text"><a href="/page7">Fortnite</a></div>
-            </div>
-            <div class="box">
-                <div class="placeholder">
-                    <img src="static/images/tetris.jpg" alt="Image 7">
-                </div>
-                <div class="box-text"><a href="/page8">Tetris</a></div>
-            </div>
-            <div class="box">
-                <div class="placeholder">
-                    <img src="static/images/snake.jpg" alt="Image 8">
-                </div>
-                <div class="box-text"><a href="/page9">Snake</a></div>
-            </div>
-            <div class="box">
-                <div class="placeholder">
-                    <img src="static/images/hotline.jpg" alt="Image 9">
-                </div>
-                <div class="box-text"><a href="/page10">Hotline Miami</a></div>
-            </div>
-            <div class="box">
-                <div class="placeholder">
-                    <img src="static/images/bloodborne.jpg" alt="Image 10">
-                </div>
-                <div class="box-text"><a href="/page11">Bloodborne</a></div>
-            </div>
-            <div class="box">
-                <div class="placeholder">
-                    <img src="static/images/sekiro.jpg" alt="Image 11">
-                </div>
-                <div class="box-text"><a href="/page12">Sekiro</a></div>
-            </div>
-            <div class="box">
-                <div class="placeholder">
-                    <img src="static/images/dishonoured.jpg" alt="Image 12">
-                </div>
-                <div class="box-text"><a href="/page13">Dishonored</a></div>
-            </div>
-            <div class="box">
-                <div class="placeholder">
-                    <img src="static/images/skyrim.jpg" alt="Image 13">
-                </div>
-                <div class="box-text"><a href="/page14">Skyrim</a></div>
-            </div>
-            <div class="box">
-                <div class="placeholder">
-                    <img src="static/images/fallout4.jpg" alt="Image 14">
-                </div>
-                <div class="box-text"><a href="/page15">Fallout 4</a></div>
-            </div>
-            <div class="box">
-                <div class="placeholder">
-                    <img src="static/images/newvegas.jpg" alt="Image 15">
-                </div>
-                <div class="box-text"><a href="/page16">Fallout: New Vegas</a></div>
-            </div>
-            <div class="box">
-                <div class="placeholder">
-                    <img src="static/images/spider.jpg" alt="Image 16">
-                </div>
-                <div class="box-text"><a href="/page17">Spider-Man</a></div>
-            </div>
-            <div class="box">
-                <div class="placeholder">
-                    <img src="static/images/dark.jpg" alt="Image 17">
-                </div>
-                <div class="box-text"><a href="/page18">Dark Souls</a></div>
-            </div>
-            <div class="box">
-                <div class="placeholder">
-                    <img src="static/images/doom.jpg" alt="Image 18">
-                </div>
-                <div class="box-text"><a href="/page19">DOOM</a></div>
-            </div>
-            <div class="box">
-                <div class="placeholder">
-                    <img src="static/images/portal.jpg" alt="Image 19">
-                </div>
-                <div class="box-text"><a href="/page20">Portal 2</a></div>
-            </div>
-            <div class="box">
-                <div class="placeholder">
-                    <img src="static/images/hunt.jpg" alt="Image 20">
-                </div>
-                <div class="box-text"><a href="/page21">Hunt Showdown</a></div>
             </div>
         </div>
     </div>
-
-</body>
-</html>
+    {% endblock %}
