@@ -9,7 +9,7 @@
             {% for game in games %}
             <div class="box">
                 <div class="placeholder">
-                    <img src="static/images/id.jpg" alt="alt_text">
+                    <img src= "{{ game[2] }}" alt="{{ game[3] }}">
                 </div>
                 <div class="box-text"><a href="/videogame/{{ game[0] }}">{{ game[1] }}</a></div><!--Links the text within the box to a page which contains information about the game-->
             </div>

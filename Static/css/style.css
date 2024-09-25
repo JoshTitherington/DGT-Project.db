@@ -14,7 +14,7 @@
 body {
     font-family: Mukta-Vanni-Regular;
     line-height: 1.6;
-    background-color: #f4f4f4;
+    background: linear-gradient(to left, rgb(252, 252, 252), rgb(105, 182, 105));
     color: #333;
     padding: 20px;
 }
@@ -139,4 +139,6 @@ footer {
     .topnav input[type=text] {
       border: 1px solid #ccc;
     }
+
   }
+
